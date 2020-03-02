@@ -1,0 +1,148 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{dsdmacros}
+
+%\usepackage[danish]{babel} % danish may not be present, if not try "sudo apt install texlive-lang-european" a fmtutil -sys --all
+%\selectlanguage{danish}
+
+\newcommand\mymaketitle[1]{
+   \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+   \rule{\textwidth}{0.4pt}
+   \\   
+   \huge \bf #1\\
+   \vspace{-8pt}
+   \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+   \rule{\textwidth}{1.6pt}
+}
+
+\begin{document}
+
+\title{
+	\mymaketitle{E2DSD\\Øvelse \# - Navn på øvelse}
+}
+\author{
+	Gruppe \#\\
+	Navn1 - Studienummer\\
+	Navn2 - Studienummer
+}
+\date{21 januar 2018}
+
+\maketitle
+
+\section{Øvelsestemplate}
+
+\subsection{Introduktion}
+
+Her besvares spørgsmålet: ”Hvorfor?”.  Baseret på din forståelse af
+øvelsesvejledningen, hvad ser du som formålet med øvelsen?  3-5 linjer. 
+Ligesom det indledende i en avisartikel, skal den være kort, præcist og give
+læseren lyst til at læse videre.
+
+\subsection{Design og Implementering}
+
+Her besvares spørgsmålet: ”Hvordan?”.  Du beskriver her hvordan du har løst
+opgaven.  Har du skrevet kode, indsættes den her.  Koden skal indeholde
+passende kommentarer for det som ikke er trivielt eller ikke er set før. 
+Indeholder din løsning hardware, beskrives denne også her.
+
+\subsection{Resultater}
+
+Her besvares spørgsmålet: ”Hvad?”.  Resultater i form af
+simuleringwaveforms, RTL- og Technology Map Views og fotos fra tests
+medtages her.  Vigtige observationer fremhæves nøgternt, f.eks.  med cirkle
+og pile på figurer og med tilhørende tekst.  Du skal ikke tolke dine
+resultater her, blot præsentere dem.
+
+\subsection{Diskussion}
+
+Dette afsnit diskuterer og tolker på resultaterne og uddyber besvarelsen af
+spørgsmålet: ”Hvad?” Fremhæv og forklar sammenhænge fundet i resultaterne
+(Eller ikke fundet!).  F.eks.  hvordan afspejles implementeringen i
+resultaterne?  Hvordan mapper kode til RTL-Views?  Hvordan fremgår det af
+simuleringen at koden implementerer det ønskede?  Hvordan illustrerer fotoet
+det?  Hvad er sammenhængen imellem emne, implementering og testresultater? 
+Hvis en opgave har flere underopgaver og dermed resultater, kan man, hvis
+det giver mening, lægge et diskussionsafsnit ved hvert resultat i stedet for
+et samlet afsnit.
+
+\subsection{Konklusion}
+
+Samlet, kort konlusion på øvelsen.  Hvilke mål blev opfyldt, hvilke mål kom
+i ikke i mål med og hvorfor.
+
+\section{Øvelse: Half-, full- og ripple-adders}
+
+Dette er et eksempel på en journal lavet via templaten.
+
+\subsection{Introduktion}
+
+Denne øvelse undersøges implementeringen af half- / full- og ripple-carry
+adders.  Formålet er at lære de forskellige kodningsformer i VHDL, samt at
+arbejde med aritmetik i VHDL.  Design og Implementering I øvelse 1
+implementeres en 4-bit adder.  Den kommenterede source kode er vist i snippet
+herunder. Kommentarer benytter Doxygen (doxygen.org) syntax.
+
+\lstinputlisting{Src/snippet.vhd}
+
+%\dsdsrc{snippet.vhd}{caption text}{tbp}
+
+\subsection{Resultater}
+
+I øvelsen undersøges outputtet af implementeringerne: Hvad bliver koden til
+rent skematisk?  Hvad er det simulerede output?  Og hvad sker der når vi
+tester på DE2-boardet?
+
+\dsdfig{rtl-view.png}{6cm}{Kredsløb programmeret med dataflow strukturen.}{tbp}
+
+Af RTL-view’et illustreret i \figref{rtl-view.png} fremgår det at det at
+half-adder koden skrevet i dataflow style syntetiseres til hhv.  en xor- og
+en and- gate.
+
+\subsection{Diskussion}
+
+Dataflow er den mest low-level kodningsform i VHDL.  De to dataflow udtryk
+fra koden i afsnit 2 oversættes direkte til to gates som det ses af
+\figref{rtl-view.png}.  Det vil sige at der er tæt sammenhæng mellem det
+skrevne i dataflow og implementeringen, hvilket vi også forventede.
+
+\subsubsection{Timing simulering}
+
+%\begin{figure}[bp]
+%	\centering
+%   \includegraphics[width=0.5\textwidth]{Figs/timing-simulation.png}
+%	\caption{min figure}
+%	\label{fig:timing-simulation}
+%\end{figure}
+% 
+% use def/macro instead
+\dsdfig{timing-simulation.png}{12cm}{Timing simulering for adder. (Bemærk at
+opløsningen for figuren ikke er god nok her!)}{tbb}
+
+I simuleringen er alle kombinationsmuligheder for A og B anvendt, og det
+fremgår at outputtene følger funktionen for en full-adder.  Hvor inputtene
+skifter samtidigt, forekommer der spikes (eller glitches) på outputtet, se
+\figref{timing-simulation.png}.
+
+\subsection{Diskussion}
+
+Implementeringen af full-adderen lever funktionelt op til hensigten.  Der er
+midlertidig spikes på outputtene når inputtene skifter samtidigt.  Dette sås
+ikke for den funktionelle simulering og årsagen hertil skal findes i routing
+delay fra FPGA pins til.... Statisk-0/1 Hazard…Karnough…
+
+\subsubsection{Test på DE2-Board}
+
+\dsdfig{de2board-photo.png}{8cm}{Foto af DE2-board, for test af adder.}{tbp}
+
+Adderen blev mappet til switches og 7-segment displays, som illustreret i
+\figref{de2board-photo.png}, bygget og programmeret ned på DE2-boardet. 
+Ved at sætte switches, skiftede display til den korrekte sum.
+
+\subsection{Konklusion}
+
+Adderen fungerer funktionelt som den er designet i VHDL.  Adderen kan lave
+overflow, men implementeringen tager heller ikke højde for dette.  De spikes
+som sås i simuleringen, \figref{timing-simulation.png}, ses ikke i testen. 
+De er for kortvarige til at kunne ses med det blotte øje på displayene.
+
+\end{document}
+
