@@ -1,8 +1,7 @@
 \documentclass[../journal2.tex]{subfiles}
-\graphicspath{{Figs/3_1/}}
+\graphicspath{{Figs/3_1/}{../Figs/3_1/}}
+
 \begin{document}
-
-
 
 \subsection{Introduktion}
 Formålet med denne del af øvelsen vil være endnu en gang at konstruere en 4bit-adder i VHDL. istedet for logiske operatorer og kombinationer af half-adders, vil vi dog denne gang gøre brug af aritmetik funktioner i Quartus II til at bygge vores 4bit-adder. Desuden vil vi foretage test af forskellen af \textit{signed} og \textit{unsigned}, og hvilken effekt de kan have på vores 4bit-adder.
@@ -11,7 +10,5 @@ Formålet med denne del af øvelsen vil være endnu en gang at konstruere en 4bi
 Vi implementerer vores 4bit-adder vha. addition aritmetik operatoren i Quartus II, indkluderet i numeric\textunderscore std biblioteket.Operatoren har den ulempe at den ikke kan foretage udregninger på std\textunderscore logic\textunderscore vector's. Som det kan ses på Fig. 1, skal vores input og output udforme sig i denne slags vektorer, altså må vi tage forhold for denne svaghed.
 
 \pic{Unsigned1.png}{1}{a}{a}
-
-
 
 \end{document}
