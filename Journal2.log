@@ -1,23 +1,9 @@
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.7)  3 MAR 2020 10:33
 entering extended mode
-**./3_1.tex
-(3_1.tex
+**./Journal2.tex
+(Journal2.tex
 LaTeX2e <2020-02-02>
 L3 programming layer <2020-02-03>
-("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfiles\subfiles.
-cls"
-Document Class: subfiles 2020/02/14 v1.6 Multi-file projects (class)
-Preamble taken from file `../journal2.tex'
-("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim.sty
-"
-Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks14
-\verbatim@line=\toks15
-\verbatim@in@stream=\read2
-)
-("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/import\import.sty"
-Package: import 2020/01/22  v 6.0
-) (../journal2.tex
 ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo"
@@ -34,7 +20,7 @@ File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
-) (../dsdmacros.sty
+) (dsdmacros.sty
 Package: dsdmacros 2018-01-28 v.01 CEF
 
 ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\times.sty"
@@ -49,8 +35,8 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )) ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.s
 ty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks16
-\inpenc@posthook=\toks17
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
 )
 ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty"
 Package: babel 2020/02/03 3.39 The Babel package
@@ -76,7 +62,7 @@ File: babel.def 2020/02/03 3.39 Babel common definitions
 
 ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.d
 ef")
-\bbl@readstream=\read3
+\bbl@readstream=\read2
 \bbl@dirlevel=\count176
 )
 Package babel Info: \l@canadian = using hyphenrules for english
@@ -93,7 +79,7 @@ Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
 y"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks18
+\KV@toks@=\toks16
 )
 ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
 sty"
@@ -139,7 +125,7 @@ Package caption Info: Standard document class detected.
 sty"
 \lst@mode=\count179
 \lst@gtempboxa=\box45
-\lst@token=\toks19
+\lst@token=\toks17
 \lst@length=\count180
 \lst@currlwidth=\dimen145
 \lst@column=\count181
@@ -214,7 +200,7 @@ Package: iftex 2019/11/07 v1.0c TeX engine tests
 \Gm@layoutheight=\dimen154
 \Gm@layouthoffset=\dimen155
 \Gm@layoutvoffset=\dimen156
-\Gm@dimlist=\toks20
+\Gm@dimlist=\toks18
 
 ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
 cfg"))
@@ -223,7 +209,7 @@ sty"
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip49
 \enit@outerparindent=\dimen157
-\enit@toks=\toks21
+\enit@toks=\toks19
 \enit@inbox=\box47
 \enit@count@id=\count190
 \enitdp@description=\count191
@@ -234,29 +220,32 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfiles\subfiles.
 sty"
 Package: subfiles 2020/02/14 v1.6 Multi-file projects (package)
-)))
+
+("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/import\import.sty"
+Package: import 2020/01/22  v 6.0
+))
 ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
 d-pdfmode.def"
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count194
 \l__pdf_internal_box=\box48
-) (3_1.aux)
-\openout1 = `3_1.aux'.
+) (Journal2.aux)
+\openout1 = `Journal2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
@@ -266,12 +255,12 @@ df.mkii"
 \scratchbox=\box49
 \nofMPsegments=\count196
 \nofMParguments=\count197
-\everyMPshowfont=\toks22
+\everyMPshowfont=\toks20
 \MPscratchCnt=\count198
 \MPscratchDim=\dimen159
 \MPnumerator=\count199
 \makeMPintoPDFobject=\count266
-\everyMPtoPDFconversion=\toks23
+\everyMPtoPDFconversion=\toks21
 )
 ("C:\Users\1chri\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
 pdf-base.sty"
@@ -318,24 +307,28 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-[1
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 30.
+(sec/3_1.tex) [1
 
-{C:/Users/1chri/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (3_1.aux) )
- 
+{C:/Users/1chri/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Journal2.a
+ux) ) 
 Here is how much of TeX's memory you used:
- 5869 strings out of 481565
- 89061 string characters out of 2914180
- 341040 words of memory out of 3000000
- 21050 multiletter control sequences out of 15000+200000
- 542653 words of font info for 32 fonts, out of 3000000 for 9000
+ 5885 strings out of 481565
+ 88854 string characters out of 2914180
+ 341172 words of memory out of 3000000
+ 21067 multiletter control sequences out of 15000+200000
+ 555182 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,5n,59p,423b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/1chri/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<
-C:/Users/1chri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.p
-fb><C:/Users/1chri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr
-8a.pfb><C:/Users/1chri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/
-utmri8a.pfb>
-Output written on 3_1.pdf (1 page, 33280 bytes).
+ 49i,6n,46p,446b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/1chri/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.
+enc}<C:/Users/1chri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utm
+b8a.pfb><C:/Users/1chri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times
+/utmr8a.pfb><C:/Users/1chri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on Journal2.pdf (1 page, 37016 bytes).
 PDF statistics:
  19 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
