@@ -2,6 +2,8 @@
 \usepackage{dsdmacros}
 \usepackage{subfiles}
 
+\graphicspath{{img/}}
+
 %\usepackage[danish]{babel} % danish may not be present, if not try "sudo apt install texlive-lang-european" a fmtutil -sys --all
 %\selectlanguage{danish}
 
@@ -14,6 +16,16 @@
    \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
    \rule{\textwidth}{1.6pt}
 }
+
+\newcommand{\pic}[4]{
+	\begin{figure}[hp]
+		\centering
+		\includegraphics[width=#2\textwidth]{#1}
+		\caption{#3}
+		\label{#4}
+	\end{figure}
+	\hspace*{\fill}
+} 
 
 \begin{document}
 
