@@ -7,36 +7,118 @@
 Formålet med denne del af øvelsen vil være endnu en gang at konstruere en 4bit-adder i VHDL. istedet for logiske operatorer og kombinationer af half-adders, vil vi dog denne gang gøre brug af aritmetik funktioner i Quartus II til at bygge vores 4bit-adder. Desuden vil vi foretage test af forskellen af \textit{signed} og \textit{unsigned}, og hvilken effekt de kan have på vores 4bit-adder.
 
 \subsection{Design og implementering}
-Vi implementerer vores 4bit-adder vha. addition aritmetik operatoren i Quartus II, indkluderet i numeric\textunderscore std biblioteket.Operatoren har den ulempe at den ikke kan foretage udregninger på std\textunderscore logic\textunderscore vector's. Som det kan ses på Fig. \ref{Fig1}, skal vores input og output udforme sig i denne slags vektorer, altså må vi tage forhold for denne svaghed.
+Vi implementerer vores 4bit-adder vha. addition aritmetik operatoren i Quartus II, indkluderet i numeric\textunderscore std biblioteket.Operatoren har den ulempe at den ikke kan foretage udregninger på std\textunderscore logic\textunderscore vectors. Som det kan ses på Fig. \ref{Fig1}, skal vores input og output udforme sig i denne slags vektorer, altså må vi tage forhold for denne svaghed.
 
 \pic{Unsigned1.png}{1}{opbygning af 4bit-adder}{Fig1}
 
-Vi benytter \textit{unsigned()} funktionen til at konvertere vores std\textunderscore logic vektorer til unsigned vektorer, for at kunne benytte ''+'' operatoren på dem. Et nyt problem opstår dog i at vi gerne vil placere resultatet af vores operation i vores \textit{sum} vektor, som også er angivet som std\textunderscore logic\textunderscore vector på Fig. \ref{Fig1}. Derfor benytter vi \textit{std\textunderscore logic\textunderscore vector()} funktionen til at konvertere vores resultat tilbage til std\textunderscore logic\textunderscore vector, så det kan indsættes i \textit{sum} vektoren. Koden kan ses nedenfor:
+Vi benytter \textit{unsigned()} funktionen til at konvertere vores std\textunderscore logic vektorer til unsigned vektorer, for at kunne benytte ''+'' operatoren på dem. Et nyt problem opstår dog i at vi gerne vil placere resultatet af vores operation i vores \textit{sum} vektor, som også er angivet som std\textunderscore logic\textunderscore vector på Fig.\ref{Fig1}. Derfor benytter vi \textit{std\textunderscore logic\textunderscore vector()} funktionen til at konvertere vores resultat tilbage til std\textunderscore logic\textunderscore vector, så det kan indsættes i \textit{sum} vektoren. Koden kan ses nedenfor:
 
-%Indsæt kode for four_bit_adder_simple her
+\begin{table}[H]
+    \centering
+      \framebox{
+        \rule{8pt}{0pt}
+          \lstinputlisting[firstline=1,lastline=16]{../src/four_bit_adder_simple.vhd}
+  }
+  \caption{Kode for 4bit-adder med unsigned}	
+  \label{src:Tab1}
+\end{table}
 
-For at teste vores 4bit-adder foretog vi en functional simulation af vores kode. Koden for testfilen kan ses nedenfor, sammen med resultaterne af smuleringen på Fig. :
+For at teste vores 4bit-adder foretog vi en functional simulation af vores kode. Koden for testfilen kan ses nedenfor, sammen med resultaterne af simuleringen på Fig.\ref{Fig2} i Resultater :
 
-%Indsæt kode for testfil for four_bit_adder_simple her
-%Indsæt resultater af simulering for four_bit_adder_simple her
+\begin{table}[H]
+    \centering
+      \framebox{
+        \rule{8pt}{0pt}
+          \lstinputlisting{../src/test.vhd}
+  }
+  \caption{Kode for 4bit-adder med unsigned}	
+  \label{src:Tab1}
+\end{table}
 
-Vi foretog derefter en realisering på et DE2-Board. Resultatet af realiseringen kan ses på Fig. nedenfor:
+Vi foretog derefter en realisering på et DE2-Board. Resultatet af realiseringen kan ses på Fig.\ref{Fig3} nedenfor:
 
+\pic{Placeholder Image.png}{0.8}{Placeholder Image}{Fig3}
 %Indsæt realisering på DE2-Board for four_bit_adder_simple her
 
 Vi skulle nu teste hvordan vores 4bit-adder ville reagere, hvis vi ændrede typen af vektorerne i vores addition fra unsigned til signed. Vi skulle desuden teste hvorvidt om man kan have adskillige articheture's knyttet til den samme design entity. Derfor indeholder koden for vores signed 4bit-adder også koden for vores unsigned 4bit-adder i en delt architecture. Koden kan ses nedenfor:
 
-%Indsæt kode for four_bit_adder_simple med begge architecture her
+\begin{table}[H]
+    \centering
+      \framebox{
+        \rule{8pt}{0pt}
+          \lstinputlisting{../src/four_bit_adder_simple.vhd}
+  }
+  \caption{Kode for 4bit-adder med unsigned og signed architecture}	
+  \label{src:Tab2}
+\end{table}
 
-Denne strukturer blev også realiseret på DE2-Board, som ses på Fig.
+Denne strukturer blev også realiseret på DE2-Board, som ses på Fig.\ref{Fig4}:
 
+\pic{Placeholder Image.png}{0.8}{Placeholder Image}{Fig4}
 %Indsæt realisering af De2-Baord for four_bit_adder_simple med begge architecture her
 
+Til sidst skulle vi forsøge at opgradere vores 4bit-adder, for at undgå overflow ved udregninger. Vi skal derfor have indkluderet et femte element, \textit{c\textunderscore in} til vores udregning. For at gøre dette, bliver vi nødt til at forøge størrelsen af vores inputvektorer, for at få plads til det nye element.\\
+Vi benytter \textit{resize()} funktionen til at forlænge vektorerne for vores inputs fra 4 til 5 elementer. Idet \textit{resize()} heller ikke fungerer på std\textunderscore logic\textunderscore vectors, konvertere vi først vektorerne om til unsigned. Vi konkatinerer derefter std\textunderscore logic element c\textunderscore in med ''0000'', for at danne en vektor vi kan sammensætte med vores input vektorer gennem addition.\\
+Vi skal nu have splittet det femte element fra vektoren igen, for at indføre det i \textit{c\textunderscore out}. Derfor indføre vi resultatet i et signal \textit{c1}, så vi får c\textunderscore out som en seperat value, mens de resterende elementer kan indføres i sum som tidligere.\\
+En lignende version for signed konstrueres og begge realiseres på DE2-Board.  Koden for dette ses nedenfor, samt realisering ses på Fig.\ref{Fig5}:
+
+\begin{table}[H]
+    \centering
+      \framebox{
+        \rule{8pt}{0pt}
+          \lstinputlisting{../src/four_bit_adder.vhd}
+  }
+  \caption{Kode for 4bit-adder med unsigned og signed architecture, c\textunderscore in}	
+  \label{src:Tab4}
+\end{table}
+
+\pic{Placeholder Image.png}{0.8}{Placeholder Image}{Fig5}
+%Indsæt realisering af c_in 4bit-adder med unsigned+signed version her
+
+\subsection{Resultater og diskussion}
+
+Tal her om funcional simulation
+\pic{Placeholder Image.png}{0.8}{Placeholder Image}{Fig2}
+%Indsæt resultater af simulering for four_bit_adder_simple her
+
+Ved vores realisering med DE2-Boardet for unsigned 4bit-adder.
 
 
-\subsection{Resultater}
+
+Tal her lidt om hvordan DE2-Baordene fungere som forventet, en 4bit-adder. How does the binary output compute? How does it compare
+with the unsigned version? Why? When do you think it can be beneficial to have
+multiple architectures (implementations) for a single design entity?
+
+Men så ved signed version, at fik problemer med nogle udregninger, også at forvente da mest betydende bit går til fortegn. Derfor lavede modification med Cin, så kunne få ekstra bit til at regne  med fortegn. Så virkede fint.
+
+
+
+
+
 For at teste vores 4bit-adder foretog vi en functional simulation af vores kode. 
 
-
+Derfor at vi opgradere bit-adder, ellers kan ikke regne med 4 bit for signed
 
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
