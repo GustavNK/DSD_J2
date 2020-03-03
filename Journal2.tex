@@ -1,6 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage{dsdmacros}
 \usepackage{subfiles}
+\usepackage{float}
 
 \graphicspath{{img/}}
 
@@ -18,13 +19,12 @@
 }
 
 \newcommand{\pic}[4]{
-	\begin{figure}[hp]
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=#2\textwidth]{#1}
 		\caption{#3}
 		\label{#4}
 	\end{figure}
-	\hspace*{\fill}
 } 
 
 \begin{document}
@@ -46,6 +46,7 @@
 
 \section{Signed and unsigned arithemitcs}
 \subfile{sec/3_1}
+\newpage
 
 \section{Concatenation}
 \subfile{sec/3_2}
