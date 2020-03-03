@@ -113,15 +113,15 @@
 	\end{table}
 }
 
-\newcommand\dsdsrcs[3]{
+\newcommand\dsdsrcsline[5]{
 	\begin{table}[#3]
 		\centering
 		  \framebox{
 		    \rule{8pt}{0pt}
-			  \lstinputlisting{\dirsrc#1}
+			  \lstinputlisting[firstline=#4,lastline=#5]{\dirsrc #1}
       }
-		\caption{#2}
-		\label{src:#1}
+	%	\caption{#2}
+	%	\label{src:#1}
 	\end{table}
 }
 
