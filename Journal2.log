@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.15)  3 MAR 2020 10:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.15)  3 MAR 2020 10:50
 entering extended mode
 **c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.tex
 (c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.tex
@@ -277,20 +277,23 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 30.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 35.
-(c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\sec/3_1.tex) [1
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 36.
+(c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\sec/3_1.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 7.
+) [1
 
 {C:/Users/Gustav/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\Journal2.aux) ) 
 Here is how much of TeX's memory you used:
- 6067 strings out of 492895
- 91892 string characters out of 3123268
+ 6070 strings out of 492895
+ 91929 string characters out of 3123268
  173101 words of memory out of 3000000
- 9898 multiletter control sequences out of 15000+200000
- 24445 words of font info for 32 fonts, out of 3000000 for 9000
+ 9900 multiletter control sequences out of 15000+200000
+ 27248 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,6n,40p,488b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Gustav/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Gustav/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Gustav/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Gustav/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\Journal2.pdf (1 page, 35423 bytes).
+Output written on c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\Journal2.pdf (1 page, 38669 bytes).
 PDF statistics:
  19 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
