@@ -1,19 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.15)  3 MAR 2020 10:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.15)  3 MAR 2020 10:45
 entering extended mode
-**c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Sec/3_1.tex
-(c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Sec/3_1.tex
+**c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.tex
+(c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.tex
 LaTeX2e <2018-12-01>
-("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfiles\subfiles.cls"
-Document Class: subfiles 2019/10/30 v1.5 Multi-file projects (class)
-Preamble taken from file `../journal2.tex'
-("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim.sty"
-Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks14
-\verbatim@line=\toks15
-\verbatim@in@stream=\read1
-) ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/import\import.sty"
-Package: import 2009/03/23  v 5.1
-) (journal2.tex ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo"
 File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
@@ -29,7 +19,7 @@ File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (dsdmacros.sty
+) (c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\dsdmacros.sty
 Package: dsdmacros 2018-01-28 v.01 CEF
  ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
@@ -40,8 +30,8 @@ File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )) ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks16
-\inpenc@posthook=\toks17
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
 ) ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty"
 Package: babel 2019/05/04 3.31 The Babel package
  ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.def"
@@ -68,7 +58,7 @@ File: babel.def 2019/05/04 3.31 Babel common definitions
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
  ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks18
+\KV@toks@=\toks16
 ) ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
  ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
@@ -101,7 +91,7 @@ Package caption Info: Standard document class detected.
 ) ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.sty"
 \lst@mode=\count92
 \lst@gtempboxa=\box27
-\lst@token=\toks19
+\lst@token=\toks17
 \lst@length=\count93
 \lst@currlwidth=\dimen113
 \lst@column=\count94
@@ -163,12 +153,12 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen122
 \Gm@layouthoffset=\dimen123
 \Gm@layoutvoffset=\dimen124
-\Gm@dimlist=\toks20
+\Gm@dimlist=\toks18
  ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.cfg")) ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/enumitem\enumitem.sty"
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip43
 \enit@outerparindent=\dimen125
-\enit@toks=\toks21
+\enit@toks=\toks19
 \enit@inbox=\box29
 \enit@count@id=\count103
 \enitdp@description=\count104
@@ -177,22 +167,24 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enitdp@dsdsubexe=\count106
 ) ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfiles\subfiles.sty"
 Package: subfiles 2019/10/30 v1.5 Multi-file projects (package)
-))) (c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\Sec\3_1.aux)
-\openout1 = `3_1.aux'.
+ ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/import\import.sty"
+Package: import 2009/03/23  v 5.1
+)) (c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\Journal2.aux)
+\openout1 = `Journal2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 18.
  ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
@@ -202,12 +194,12 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 \scratchbox=\box30
 \nofMPsegments=\count108
 \nofMParguments=\count109
-\everyMPshowfont=\toks22
+\everyMPshowfont=\toks20
 \MPscratchCnt=\count110
 \MPscratchDim=\dimen127
 \MPnumerator=\count111
 \makeMPintoPDFobject=\count112
-\everyMPtoPDFconversion=\toks23
+\everyMPtoPDFconversion=\toks21
 ) ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  ("C:\Users\Gustav\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infwarerr.sty"
@@ -248,7 +240,7 @@ Package caption Info: End \AtBeginDocument code.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
@@ -278,21 +270,27 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 30.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
-[1
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 35.
+(c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\sec/3_1.tex) [1
 
-{C:/Users/Gustav/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\Sec\3_1.aux) ) 
+{C:/Users/Gustav/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\Journal2.aux) ) 
 Here is how much of TeX's memory you used:
- 6086 strings out of 492895
- 92426 string characters out of 3123268
- 171979 words of memory out of 3000000
- 9916 multiletter control sequences out of 15000+200000
- 14719 words of font info for 23 fonts, out of 3000000 for 9000
+ 6067 strings out of 492895
+ 91892 string characters out of 3123268
+ 173101 words of memory out of 3000000
+ 9898 multiletter control sequences out of 15000+200000
+ 24445 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,5n,49p,469b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,6n,40p,488b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Gustav/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Gustav/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Gustav/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Gustav/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\Sec\3_1.pdf (1 page, 30407 bytes).
+Output written on c:/Users\Gustav\Documents\GitHub\DSD\DSD_J2\Journal2.pdf (1 page, 35423 bytes).
 PDF statistics:
  19 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
