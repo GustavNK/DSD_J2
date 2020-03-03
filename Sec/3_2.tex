@@ -21,10 +21,10 @@ Som det kan ses på tabel \ref{src:shift_div} har vi initieret vores inputs som 
 \end{table}
 
 Vi har brugt Dataflow stilen til at implementere vores shift og rotate arkitekture. "Shift 1x left" bruger linje 2 og 5-6, hvor der konkateneres et ekstra 0 bagerst på input a, hvilket gør denne til en vector af størelsen 9-bit. Den vektor tilføjes til signalet a\textunderscore shl\textunderscore signal, som er en vector af størelsen 9-bit. Der efter vælges de nederste 8-bits, (7 ned til 0) som sendes til output a\textunderscore shl. Det sidste bit ignoreres og udgår. Hermed er input fra a, skubbet 1 til venstre.\par
-Til "Shift 2x right" bruges meget den samme ide som med "Shift 1x left". Der konkateneres bare 2 nuller foran vores input fra a, som også lægges i et signal, her a\textunderscore shl\textunderscore signal
+Til "Shift 2x right" bruges meget den samme ide som med "Shift 1x left". Der konkateneres bare 2 nuller foran vores input fra a, som også lægges i et signal, her a\textunderscore shl\textunderscore signal, som er en vector af størrelsen 10-bits. Istedet for at ignorere det sidste bit, ignorerer vi istedet de første 2 bits. Dermed er det kun bit 9 til 2, der bliver sendt videre som output til a\textunderscore ror. \par
+For at rotere vores input, udnyttede vi det at dele vectoren op i del, og "lime" dem sammen igen med konkatenation. Vi tog altså de 3 LSB og konkatenerede dem med de resterende 5 MSB. Disse kune vi så sende direkte videre på a\textunderscore ror.
 
-
-\begin{table}[!h]
+\begin{table}[H]
     \centering
       \framebox{
         \rule{8pt}{0pt}
@@ -36,6 +36,15 @@ Til "Shift 2x right" bruges meget den samme ide som med "Shift 1x left". Der kon
 
 
 \subsection{Resultater}
+
+For at undersøge om vores shift og rotate funktioner har fungeret, har vi kørt en functional simulering af vores system. \par
+Som vi kan se på figur \ref{wvf_shl}, har inputtet rykket sig en gang mod venstre. Dette ses f.eks. af at bit nr. 5 på input, er rykket til bit nr. 6 i output. Desuden er der belvet indsat et nul på bit nr. 0 på outpur, og bit nr. 7 fra input er forsvundet.
+\pic{wvf_shl}{1}{Functional waveform simulering af a\textunderscore shl}{wvf_shl}
+
+
+\pic{wvf_shr}{1}{Functional waveform simulering af a\textunderscore shr}{wvf_shr}
+\pic{wvf_ror}{1}{Functional waveform simulering af a\textunderscore ror}{wvf_ror}
+
 
 \subsection{Diskussion}
 
