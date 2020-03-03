@@ -15,8 +15,27 @@ Vi benytter \textit{unsigned()} funktionen til at konvertere vores std\textunder
 
 %Indsæt kode for four_bit_adder_simple her
 
+For at teste vores 4bit-adder foretog vi en functional simulation af vores kode. Koden for testfilen kan ses nedenfor, sammen med resultaterne af smuleringen på Fig. :
+
+%Indsæt kode for testfil for four_bit_adder_simple her
+%Indsæt resultater af simulering for four_bit_adder_simple her
+
+Vi foretog derefter en realisering på et DE2-Board. Resultatet af realiseringen kan ses på Fig. nedenfor:
+
+%Indsæt realisering på DE2-Board for four_bit_adder_simple her
+
+Vi skulle nu teste hvordan vores 4bit-adder ville reagere, hvis vi ændrede typen af vektorerne i vores addition fra unsigned til signed. Vi skulle desuden teste hvorvidt om man kan have adskillige articheture's knyttet til den samme design entity. Derfor indeholder koden for vores signed 4bit-adder også koden for vores unsigned 4bit-adder i en delt architecture. Koden kan ses nedenfor:
+
+%Indsæt kode for four_bit_adder_simple med begge architecture her
+
+Denne strukturer blev også realiseret på DE2-Board, som ses på Fig.
+
+%Indsæt realisering af De2-Baord for four_bit_adder_simple med begge architecture her
+
+
+
 \subsection{Resultater}
-For at teste vores kode foretog 
+For at teste vores 4bit-adder foretog vi en functional simulation af vores kode. 
 
 
 
