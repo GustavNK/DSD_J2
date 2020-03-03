@@ -37,7 +37,7 @@ For at teste vores 4bit-adder foretog vi en functional simulation af vores kode.
 
 Vi foretog derefter en realisering på et DE2-Board. Resultatet af realiseringen kan ses på Fig.\ref{Fig3} nedenfor:
 
-\pic{Placeholder Image.png}{0.8}{Placeholder Image}{Fig3}
+\pic{Placeholder_Image.png}{0.8}{Placeholder Image}{Fig3}
 %Indsæt realisering på DE2-Board for four_bit_adder_simple her
 
 Vi skulle nu teste hvordan vores 4bit-adder ville reagere, hvis vi ændrede typen af vektorerne i vores addition fra unsigned til signed. Vi skulle desuden teste hvorvidt om man kan have adskillige articheture's knyttet til den samme design entity. Derfor indeholder koden for vores signed 4bit-adder også koden for vores unsigned 4bit-adder i en delt architecture. Koden kan ses nedenfor:
@@ -54,7 +54,7 @@ Vi skulle nu teste hvordan vores 4bit-adder ville reagere, hvis vi ændrede type
 
 Denne strukturer blev også realiseret på DE2-Board, som ses på Fig.\ref{Fig4}:
 
-\pic{Placeholder Image.png}{0.8}{Placeholder Image}{Fig4}
+\pic{Placeholder_Image.png}{0.8}{Placeholder Image}{Fig4}
 %Indsæt realisering af De2-Baord for four_bit_adder_simple med begge architecture her
 
 Til sidst skulle vi forsøge at opgradere vores 4bit-adder, for at undgå overflow ved udregninger. Vi skal derfor have indkluderet et femte element, \textit{c\textunderscore in} til vores udregning. For at gøre dette, bliver vi nødt til at forøge størrelsen af vores inputvektorer, for at få plads til det nye element.\\
@@ -72,13 +72,13 @@ En lignende version for signed konstrueres og begge realiseres på DE2-Board.  K
   \label{src:Tab4}
 \end{table}
 
-\pic{Placeholder Image.png}{0.8}{Placeholder Image}{Fig5}
+\pic{Placeholder_Image.png}{0.8}{Placeholder Image}{Fig5}
 %Indsæt realisering af c_in 4bit-adder med unsigned+signed version her
 
 \subsection{Resultater og diskussion}
 
 Tal her om funcional simulation
-\pic{Placeholder Image.png}{0.8}{Placeholder Image}{Fig2}
+\pic{Placeholder_Image.png}{0.8}{Placeholder Image}{Fig2}
 %Indsæt resultater af simulering for four_bit_adder_simple her
 
 Ved vores realisering med DE2-Boardet for unsigned 4bit-adder.
