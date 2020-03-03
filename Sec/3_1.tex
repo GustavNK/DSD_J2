@@ -7,8 +7,17 @@
 Formålet med denne del af øvelsen vil være endnu en gang at konstruere en 4bit-adder i VHDL. istedet for logiske operatorer og kombinationer af half-adders, vil vi dog denne gang gøre brug af aritmetik funktioner i Quartus II til at bygge vores 4bit-adder. Desuden vil vi foretage test af forskellen af \textit{signed} og \textit{unsigned}, og hvilken effekt de kan have på vores 4bit-adder.
 
 \subsection{Design og implementering}
-Vi implementerer vores 4bit-adder vha. addition aritmetik operatoren i Quartus II, indkluderet i numeric\textunderscore std biblioteket.Operatoren har den ulempe at den ikke kan foretage udregninger på std\textunderscore logic\textunderscore vector's. Som det kan ses på Fig. 1, skal vores input og output udforme sig i denne slags vektorer, altså må vi tage forhold for denne svaghed.
+Vi implementerer vores 4bit-adder vha. addition aritmetik operatoren i Quartus II, indkluderet i numeric\textunderscore std biblioteket.Operatoren har den ulempe at den ikke kan foretage udregninger på std\textunderscore logic\textunderscore vector's. Som det kan ses på Fig. \ref{Fig1}, skal vores input og output udforme sig i denne slags vektorer, altså må vi tage forhold for denne svaghed.
 
-\pic{Unsigned1.png}{1}{a}{a}
+\pic{Unsigned1.png}{1}{opbygning af 4bit-adder}{Fig1}
+
+Vi benytter \textit{unsigned()} funktionen til at konvertere vores std\textunderscore logic vektorer til unsigned vektorer, for at kunne benytte ''+'' operatoren på dem. Et nyt problem opstår dog i at vi gerne vil placere resultatet af vores operation i vores \textit{sum} vektor, som også er angivet som std\textunderscore logic\textunderscore vector på Fig. \ref{Fig1}. Derfor benytter vi \textit{std\textunderscore logic\textunderscore vector()} funktionen til at konvertere vores resultat tilbage til std\textunderscore logic\textunderscore vector, så det kan indsættes i \textit{sum} vektoren. Koden kan ses nedenfor:
+
+%Indsæt kode for four_bit_adder_simple her
+
+\subsection{Resultater}
+For at teste vores kode foretog 
+
+
 
 \end{document}
