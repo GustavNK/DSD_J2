@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1583229005 "c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.tex" "c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.pdf" "Journal2" 1583229007
+["pdflatex"] 1583229307 "c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.tex" "c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.pdf" "Journal2" 1583229309
   "C:/Users/Gustav/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1557869009 4242209 ad775e7f5811ff0543cdaa58710f48b0 ""
   "C:/Users/Gustav/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1583147647 83751 6e4565e2a96ca36e797cc3ed7d4e67f8 ""
   "C:/Users/Gustav/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -65,15 +65,15 @@
   "C:/Users/Gustav/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/times.sty" 1156702454 857 6c716f26c5eadfb81029fcd6ce2d45e6 ""
   "C:/Users/Gustav/AppData/Local/Programs/MiKTeX 2.9/tex/latex/subfiles/subfiles.sty" 1572718728 3045 bedeb12cd2d254a1685885b7663dcaf4 ""
   "C:/Users/Gustav/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463131981 57049 34128738f682d033422ca125f82e5d62 ""
-  "Journal2.aux" 1583229007 365 a91c542126e38f6ff8f185d23670caba "pdflatex"
-  "Journal2.tex" 1583228970 980 4c0b534326b63c1be60af62430933ef5 ""
-  "c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.aux" 1583229007 365 a91c542126e38f6ff8f185d23670caba ""
-  "c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.tex" 1583228970 980 4c0b534326b63c1be60af62430933ef5 ""
+  "Journal2.aux" 1583229309 370 2fd80cade35ebde8432d0a4a531328d8 "pdflatex"
+  "Journal2.tex" 1583229241 866 4023edaef0aac9f6e14e359ba8b25ef4 ""
+  "c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.aux" 1583229309 370 2fd80cade35ebde8432d0a4a531328d8 ""
+  "c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.tex" 1583229241 866 4023edaef0aac9f6e14e359ba8b25ef4 ""
   "dsdmacros.sty" 1582713365 5334 efe7b39fbf2a8e037d5779b708313d13 ""
-  "sec/3_1.tex" 1583229000 535 88c7b5e5a31c90d316eaf8f639a42ef9 ""
+  "sec/3_1.tex" 1583229299 975 718e182914d137bb96a9420bb391fb41 ""
   (generated)
-  "Journal2.pdf"
   "Journal2.log"
-  "c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.pdf"
   "Journal2.aux"
+  "c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.pdf"
+  "Journal2.pdf"
   "c:/Users/Gustav/Documents/GitHub/DSD/DSD_J2/Journal2.log"
