@@ -5,17 +5,35 @@
 
 \subsection{Introduktion}
 
+Denne øvelse fokuserer på brugen af konkatenerings tegnet \textit{\&}, til at manipulere arrays af bits. Her vil vi forsøge at bruge \textit{\&} til at skubbe og rotere bits.
+
 \subsection{Design og implementering}
 
-\begin{table}[tbp]
+Som det kan ses på tabel \ref{src:shift_div} har vi initieret vores inputs som en vector fra 7 til 0, for at få 8 bit at arbejde med. De enkelte outputs for vores "Shift 1x left", "Shift 2x right" og "Rotate 3x left" er også initialiseret som en vector fra 7 til 0.
+\begin{table}[!h]
     \centering
       \framebox{
         \rule{8pt}{0pt}
-          \lstinputlisting[firstline=2,lastline=5]{\dirsrc Ex2.vhd}
+          \lstinputlisting[firstline=1,lastline=10]{\dirsrc shift_div.vhd}
   }
-  \caption{HEllo}
-  \label{src:Ex2}
+  \caption{Entity af shift\textunderscore div}
+  \label{src:shift_div}
 \end{table}
+
+Vi har brugt Dataflow stilen til at implementere vores shift og rotate arkitekture. "Shift 1x left" bruger linje 2 og 5-6, hvor der konkateneres et ekstra 0 bagerst på input a, hvilket gør denne til en vector af størelsen 9-bit. Den vektor tilføjes til signalet a\textunderscore shl\textunderscore signal, som er en vector af størelsen 9-bit. Der efter vælges de nederste 8-bits, (7 ned til 0) som sendes til output a\textunderscore shl. Det sidste bit ignoreres og udgår. Hermed er input fra a, skubbet 1 til venstre.\par
+Til "Shift 2x right" bruges meget den samme ide som med "Shift 1x left". Der konkateneres bare 2 nuller foran vores input fra a, som også lægges i et signal, her a\textunderscore shl\textunderscore signal
+
+
+\begin{table}[!h]
+    \centering
+      \framebox{
+        \rule{8pt}{0pt}
+          \lstinputlisting[firstline=12,lastline=23]{\dirsrc shift_div.vhd}
+  }
+  \caption{Architecture af shift\textunderscore div}
+  \label{src:shift_div2}
+\end{table}
+
 
 \subsection{Resultater}
 
