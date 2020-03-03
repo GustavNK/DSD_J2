@@ -1,6 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage{dsdmacros}
 \usepackage{subfiles}
+\usepackage{float}
 
 \graphicspath{{img/}}
 
@@ -18,13 +19,12 @@
 }
 
 \newcommand{\pic}[4]{
-	\begin{figure}[hp]
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=#2\textwidth]{#1}
 		\caption{#3}
 		\label{#4}
 	\end{figure}
-	\hspace*{\fill}
 } 
 
 \begin{document}
@@ -45,10 +45,26 @@
 %---------------------------------------
 
 \section{Signed and unsigned arithemitcs}
-s
 \subfile{sec/3_1}
+\newpage
 
+\section{Concatenation}
+\subfile{sec/3_2}
 
+\section{Multiplicity}
+\subfile{Sec/3_3}
+
+\section{Binary to 7-seg Decoder}
+\subfile{sec/4_1}
+
+\section{The conditional Siganl}
+\subfile{sec/4_2}
+
+\section{Table lookup}
+\subfile{sec/4_3}
+
+\section{Bidirectional ports}
+\subfile{sec/4_4}
 
 \end{document}
 
