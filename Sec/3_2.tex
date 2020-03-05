@@ -38,14 +38,35 @@ For at rotere vores input, udnyttede vi det at dele vectoren op i del, og "lime"
 \subsection{Resultater}
 
 For at undersøge om vores shift og rotate funktioner har fungeret, har vi kørt en functional simulering af vores system. \par
+
 Som vi kan se på figur \ref{wvf_shl}, har inputtet rykket sig en gang mod venstre. Dette ses f.eks. af at bit nr. 5 på input, er rykket til bit nr. 6 i output. Desuden er der belvet indsat et nul på bit nr. 0 på outpur, og bit nr. 7 fra input er forsvundet.
+
 \pic{wvf_shl}{1}{Functional waveform simulering af a\textunderscore shl}{wvf_shl}
 
+For simuleringen af a\textunderscore shr, som kan ses på figur \ref{wvf_shr}, har vi også fået det ønskede resultat. F.eks ses det på bit 5 igen, at denne er blevet rykket 2 pladser til højre, så den nu er på 3. bits plads. Desuden er der kommet 2 nuller ind på de 2 MSB's, hvilket vi også ville forvente af en shift.
+
 \pic{wvf_shr}{1}{Functional waveform simulering af a\textunderscore shr}{wvf_shr}
+
+Simuleringen for a\textunderscore ror har også fået den ønskede effekt. Hvis vi kigger på bit 2, har den rykket sig 3 pladser mod højre, men da dette er længere end bit 0, har den rykket sig rundt, og er nu det 7. bit. Dette er sket for alle.
+
 \pic{wvf_ror}{1}{Functional waveform simulering af a\textunderscore ror}{wvf_ror}
+
+På Technology Map View er det ikke helt tydeligt hvad der sker, men vi går ud fra, da der går 2 seperate linjer til a\textunderscore ror, at dette er de 2 forskellige del af vores vector, der bliver mapped. På a\textunderscore shl kan vi se en stump der fører ud i ingenting, hvilket må betyde det er det 7. bit fra, der går ud i ingen ting. For a\textunderscore shr, er det ikke tydeligt hvad der sker
+
+\pic{rtl_3_2}{0.5}{Technoligy Map View for shift\textunderscore div}{rtl_3_2}
+
+\textbf{Mangler tekst for dette}
+
+\pic{placeholder_image}{0.5}{Realisering på DE2}{eh}
 
 \subsection{Diskussion}
 
+At udnytte konkatenering (\&) til implementering af shift og rotate funktionaliteter er tydeligvis en god ide. Det er nemt, og som vi kan se på figur \ref{comp_rep_3_2}, er det ikke nødvendigt at bruge logiske elementer i vores implementering, da der blot bruges remapping af de inputs DE2 boarded får.
+
+\pic{comp_rep_3_2}{0.6}{Compilation Report for shift\textunderscore div}{comp_rep_3_2}
+
 \subsection{Konklusion}
+
+Vi har udnyttet konkatenering (\&) til at implementere 2 shift logiker og 1 rotate logik. Vi har set at implemneteringen ikke kræver nogen logiske elementer for DE2 boarded.
 
 \end{document}
