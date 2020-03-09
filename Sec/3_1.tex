@@ -78,26 +78,33 @@ En lignende version for signed konstrueres og begge realiseres på DE2-Board.  K
 \subsection{Resultater og diskussion}
 
 Tal her om funcional simulation
-\pic{Placeholder_Image.png}{0.8}{Placeholder Image}{Fig2}
+
+\pic{Placeholder_Image.png}{0.8}{Placeholder Image}{Fig6}
 %Indsæt resultater af simulering for four_bit_adder_simple her
 
-Ved vores realisering med DE2-Boardet for unsigned 4bit-adder.
+Ved vores realisering med DE2-Boardet for vores unsigned 4bit-adder så vi som forventet opførslen for en 4bit-adder.Vi kunne addere to 4bit binære tal, til en maks sumværdi på 30. Ved additoin af positive tal så vi ingen forskel melle signed og unsigned. Dog ændrede signed versionens output sig drastisk da vi begynte at addere med negative tal. Dette skyldes selvfølgelig at de negative binære værdier vi giver som input er i 2's komplement. Derved får vi jo også et output ud i 2's komplement, som vi derfor skal konvertere tilbage til standard binær.\\
+En anden logisk forskel var selvfølgelig også at idet MSB blev brugt til bestemmelse af fortegn for signed versionen, kunne vi ikke regne med lige så store tal. Denne svaghed overkom vi dog senere, ved tilføjelsen af c\textunderscore in og c\textunderscore out.
+
+%VIGTIG NOTE!!!!
+%Test maks værdi du kan regne med på unsigned simple 4bit-adder, er måske ikke 30
 
 
 
-Tal her lidt om hvordan DE2-Baordene fungere som forventet, en 4bit-adder. How does the binary output compute? How does it compare
-with the unsigned version? Why? When do you think it can be beneficial to have
-multiple architectures (implementations) for a single design entity?
+%Tal her lidt om hvordan DE2-Baordene fungere som forventet, en 4bit-adder. How does the binary output compute? How does it compare
+%with the unsigned version? Why? When do you think it can be beneficial to have
+%multiple architectures (implementations) for a single design entity?
 
-Men så ved signed version, at fik problemer med nogle udregninger, også at forvente da mest betydende bit går til fortegn. Derfor lavede modification med Cin, så kunne få ekstra bit til at regne  med fortegn. Så virkede fint.
+%Men så ved signed version, at fik problemer med nogle udregninger, også at forvente da mest betydende bit går til fortegn. Derfor lavede modification med Cin, så kunne få ekstra bit til at regne  med fortegn. Så virkede fint.
+
+\pic{Placeholder_Image.png}{0.8}{Placeholder Image}{Fig7}
+%Indsæt resultater af simulering for four_bit_adder_simple her
 
 
 
 
+%For at teste vores 4bit-adder foretog vi en functional simulation af vores kode. 
 
-For at teste vores 4bit-adder foretog vi en functional simulation af vores kode. 
-
-Derfor at vi opgradere bit-adder, ellers kan ikke regne med 4 bit for signed
+%Derfor at vi opgradere bit-adder, ellers kan ikke regne med 4 bit for signed
 
 \end{document}
 
