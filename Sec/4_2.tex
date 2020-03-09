@@ -5,12 +5,39 @@
 
 \subsection{Introduktion}
 
+I denne øvelse vil vi implementere systemet vist på figur \ref{ibd_mux}, hvor vi vil udnytte \textit{when}-stemenets. Desuden vil vi genbruge koden fra "bin2seevenseg", da vi her allerede har en fungerende binær til 7-segemtns display decoder.
+
+\pic{ibd_mux}{0.8}{IBD af Hex MUX}{ibd_mux}
+
 \subsection{Design og implementering}
 
+Vi implementeret vores entity som på tabel \ref{src:hex_mux_ent} Først implementerer vi vores inputs og outputs igennem std\textunderscore logic\textunderscore vector. Vi bruger indsætter også en "work.all", da vi vil inkludere tidligere arbejde.
+
+\begin{table}[H]
+    \centering
+      \framebox{
+        \rule{8pt}{0pt}
+          \lstinputlisting[firstline=1,lastline=11]{\dirsrc hex_mux.vhd}
+  }
+  \caption{Entity af hex\textunderscore mux}
+  \label{src:hex_mux_ent}
+\end{table}
+
+Arkitecturen for vores implementeringen kan ses på tabel \ref{src:hex_mux_arch}. Først laver vi et siganl, hvor i vores outputs fra de 3 "bin2sevenseg" kan kmbineres i. Derfefter har vi lavet en række konstanter i logic vectors, som indeholder 7 segments outputs for at vise "On", "Err" og "---". Dette gør koden mere læselig senere. Vi har portmappet vores 3 \textit{bin2seveneseg} til vores inputs \textit{bin} og signalet \textit{sseg}. Her efter bruger vi endelig vores \textit{when} statements, så vi kan vælge imellem vores inputs på multiplexeresn. Her bruges \textit{sel} så til at vælge om der skal vises "On", "Err" eller outputs fra \textit{sseg} på \textit{tsseg}. Igen har vi sikret os imod uforudsete inputs, og viser derfor \textit{dash} på vores 7-segments displays, i tilfælde af dette.
+
+\begin{table}[H]
+    \centering
+      \framebox{
+        \rule{8pt}{0pt}
+          \lstinputlisting[firstline=13,lastline=33]{\dirsrc hex_mux.vhd}
+  }
+  \caption{Architecture af hex\textunderscore mux}
+  \label{src:hex_mux_arch}
+\end{table}
 \subsection{Resultater}
 
 \subsection{Diskussion}
 
 \subsection{Konklusion}
-
+s
 \end{document}
