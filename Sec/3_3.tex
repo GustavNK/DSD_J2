@@ -5,7 +5,19 @@
 
 \subsection{Introduktion}
 
+Vores DE2 boards er i stand til multiplikation, da den har en indbygget DSP block. Denne øvelse fokuserer dog på implementering af multiplikation, uden brug af DSP blocke, men stadig ved at udnytte de libraries vi har tilgængeligt i ieee.numeric\textunderscore std.
+
 \subsection{Design og implementering}
+
+\begin{table}[H]
+    \centering
+      \framebox{
+        \rule{8pt}{0pt}
+          \lstinputlisting[firstline=1,lastline=10]{\dirsrc mult.vhd}
+  }
+  \caption{Architecture af shift\textunderscore div}
+  \label{src:shift_div2}
+\end{table}
 
 \subsection{Resultater}
 
