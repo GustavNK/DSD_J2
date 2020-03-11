@@ -12,8 +12,13 @@ end;
 
 architecture hex_mux_arch of hex_mux is
 signal   sseg	: std_logic_vector(20 downto 0);
-constant On1	: std_logic_vector(20 downto 0):= "111111110000000101011";
-constant Err	: std_logic_vector(20 downto 0):= "000011001011110101111";
+constant On1	: std_logic_vector(20 downto 0)
+	:= "111111110000000101011";
+constant Err	: std_logic_vector(20 downto 0)
+	:= "000011001011110101111";
+constant dash	: std_logic_vector(20 downto 0)
+	:= "011111101111110111111";
+
 begin
 	sseg1: entity bin2sevenseg (bin2sevenseg_arch) port map
 	(bin => bin(3 downto 0), sseg => sseg(6 downto 0));
@@ -24,5 +29,5 @@ begin
 	
 	tsseg <= On1 	when sel = "11" else
 				Err 	when sel = "01" else
-				sseg 	when sel = "10" else "011111101111110111111";
+				sseg 	when sel = "10" else dash;
 end;

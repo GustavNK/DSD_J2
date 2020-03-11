@@ -9,6 +9,42 @@
 
 \subsection{Resultater}
 
+\begin{table}[!hbt]
+    \begin{tabular}{ccc|cc}
+    \multicolumn{3}{c}{\textbf{INPUT}}   &
+    \multicolumn{2}{c}{\textbf{OUTPUT}} \\
+    SW{[}0{]} & KEY{[}2{]} & KEY{[}3{]} & LEDR{[}0{]} & LEDR{[}1{]} \\ \hline
+    0         & 0          & 0          & 1           & 0           \\
+    0         & 0          & 1          & 1           & 0           \\
+    0         & 1          & 0          & 1           & 1           \\
+    0         & 1          & 1          & 1           & 1           \\
+    1         & 0          & 0          & 0           & 1           \\
+    1         & 1          & 0          & 0           & 1           \\
+    1         & 0          & 1          & 1           & 1           \\
+    1         & 1          & 1          & 1           & 1          
+    \end{tabular}
+    \centering
+    \caption{Uden GPIO forbindelse}
+\end{table}
+
+\begin{table}[!hbt]
+    \begin{tabular}{ccc|cc}
+    \multicolumn{3}{c}{\textbf{INPUT}} & 
+    \multicolumn{2}{c}{\textbf{OUTPUT}} \\
+    SW{[}0{]} & KEY{[}2{]} & KEY{[}3{]} & LEDR{[}0{]} & LEDR{[}1{]} \\ \hline
+    0         & 0          & 0          & 0           & 0           \\
+    0         & 1          & 0          & 1           & 1           \\
+    0         & 0          & 1          & 0           & 0           \\
+    0         & 1          & 1          & 1           & 1           \\
+    1         & 0          & 0          & 0           & 0           \\
+    1         & 1          & 0          & 0           & 0           \\
+    1         & 0          & 1          & 1           & 1           \\
+    1         & 1          & 1          & 1           & 1          
+    \end{tabular}
+    \centering
+    \caption{Med GPIO forbindelse}
+\end{table}
+
 \subsection{Diskussion}
 
 \subsection{Konklusion}
