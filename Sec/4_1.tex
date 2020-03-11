@@ -2,15 +2,51 @@
 \graphicspath{{Figs/4_1/}{../Figs/4_1/}}
 
 \begin{document}
-
 \subsection{Introduktion}
+
+Formålet med denne øvelse er, at implemtnere en binær til 7-segments display decoder, ved at bruge \textit{with-select} statements. Decoderen skal implementeres som på figur \ref{bin2_7seg} her under.
+
+\pic{dec}{0.7}{Binær til 7-segments display decoder}{bin2_7seg}
 
 \subsection{Design og implementering}
 
+For at implemtnere vores binær til 7-segments display opsætter vi først vores entity med vores library og input \textit{bin} som 4 bit, og \textit{sseg} som et 7-bit output. Koden til vores entity kan ses i tabel \ref{src:bin2sevenseg1}.
+
+\begin{table}[!hbt]
+  \centering
+    \framebox{
+      \rule{8pt}{0pt}
+        \lstinputlisting[firstline=1,lastline=10]{\dirsrc bin2sevenseg.vhd}
+}
+\caption{Entity af bin2sevenseg}
+\label{src:bin2sevenseg1}
+\end{table}
+
+Her efter har vi implementeret decoderen med en række \textit{with-select} statements, der håndterer alle mulige binære værdier, \textit{bin} kan tage. Da det er en 4-bit decoder, mangler vi tal fra 10-15, så disse bliver vist igennem deres HEX-værdier A-F istedet. For at helgadere os imod fejl i inputs, har vi lavet en \textit{Error} handler, hvor hvis DE-2 boardet får noget andet ind end 1 eller 0, såsom 'X', vil der blive vist en "-". Implementereingen kan ses her under på tabel \ref{src:bin2sevenseg2}. Vi har selvflgelig været opmærksomme på, at 7-segmentsdisplayet på DE2 boardet har common anode.
+
+\begin{table}[H]
+    \centering
+      \framebox{
+        \rule{8pt}{0pt}
+          \lstinputlisting[firstline=12,lastline=32]{\dirsrc bin2sevenseg.vhd}
+  }
+  \caption{Architecture af bin2sevenseg}
+  \label{src:bin2sevenseg2}
+\end{table}
+
 \subsection{Resultater}
+
+Som det kan ses på figur \ref{reabin2}, har vores implementering fungeret. Vi har testet alle mulige kombinationer og fået det rigtige svar ud. Som det kan ses på figur \ref{reabin2}, håndterer den som planlagt det binære input som et HEX-tal, derfor får vi vist tallet "A", ved input 1010b = 10dec.
+\pic{rea}{0.8}{Realisering af bin til 7-segments decoder}{reabin2}
 
 \subsection{Diskussion}
 
+Implementeringen af vores binær til 7-segment display har fungeret som forvetnet. Kigger vi på vores RTL-view af bin2sevenseg, ser vi at DE2 boardet implementerer koden igennem en række multiplexers, hvor boardet tager stilling til hver LED på 7-segments displayet, ud fra hvilket binært input kommer ind. RTL-view kan ses på figur \ref{reabin2}. Vi tog også et kig på Technology Map View, hvor implementeringen var forklaret som en lang række logiske porte. Dog er MUX tilgangen noget mere overskuelig.  
+
+\pic{rtl}{0.6}{RTL-view af bin2sevenseg decoder}{rtlbin}
+
 \subsection{Konklusion}
+
+Vi har implementeret en binær til 7-segment display decoder, ved at bruge \textit{with-select}. Her har vi givet Quartus en forklaring på, hvilket output vi forventer, ud fra hvilket input der bliver givet. DE2 boardet implementerede vores kode igennem en række multiplexers, der beslutter og LED-en er tændt elelr slukket. 
 
 \end{document}
