@@ -56,11 +56,11 @@ Til sidst foretog vi en realisering på DE2-Boardet. Vist på Fig. 2 er outputte
 Til opgaven blev vi bedt om at overveje hvad der kunne have være skyld i at der blev indkluderet af Latches i implementeringen af vores kode. Dog så vi ikke nogen Latches i RTL-Viewer diagrammet for vores program som ses Fig. 2 og Fig. 3:
 
 \pic{RLT_mux}{0.8}{RTL-Viewer diagram af Hex MUX}{RTL_mux}
-\pic{Open_RTL}{1}{Åbnet view af bin2sevenseg:sseg1 på RTL-viewer diagram}{RTL_mux}
+\pic{Open_RTL}{1}{Åbnet view af bin2sevenseg:sseg1 på RTL-viewer diagram}{RTL_mux_open}
 
 Vi mener at grunden til dette skyldes indkluderingen af vores ''dash'' else-statement som ses på linje 20 af Tab. 2. Ved at indkludere et dette output for alle inputs der ikke er angivet i vores architecture undgår vi at Quartus II vil forsøge at benytte Latches til strukturen. Nedenfor på Fig. 5 ses RTL-Viewer diagrammet for en version af koden hvor vi har fjernet ''else dash'' statementet, og det ses at der fremkommer en stor mængde Latches deraf.
 
-\pic{RTL_Latch}{1}{Åbnet view af bin2sevenseg:sseg1 på RTL-viewer diagram}{RTL_mux}
+\pic{RTL_Latch}{1}{Åbnet view af bin2sevenseg:sseg1 på RTL-viewer diagram}{RTL_mux_latch}
 
 \subsection{Konklusion}
 
