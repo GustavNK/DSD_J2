@@ -70,7 +70,7 @@ Da vores multiplikater gjorde brug af logiske elementer til at foretage udregnin
 
 \pic{LE1.png}{0.8}{DSP-block blok i Assignment editor}{Fig3}
 
-Vi ser at der bliver benyttet 103 logiske elementer, ud af 33216 tilgængelige. Hvis vi sammenligner dette antal med observationer af logiske elementer fra tidliger opgaver, er 103 en del højere end vi har set tidligere. Disse tidliger opgaver har selvfølgelig omhandlet andre udregninger og operationer, men denne sammenligning giver stadig et indblik i det relativt store antal logiske elementer en multiplikations udregining tager. Man kunne forestille sig at dette er grunden til at der normalt bruges DSP-blokke til denne slags operationer.\\
+Vi ser at der bliver benyttet 103 logiske elementer, ud af 33216 tilgængelige. Hvis vi sammenligner dette antal med observationer af logiske elementer fra tidliger opgaver, er 103 en del højere end vi har set tidligere. Disse tidliger opgaver har selvfølgelig omhandlet andre udregninger og operationer, men denne sammenligning giver stadig et indblik i det relativt store antal logiske elementer en multiplikations udregining tager. Man kunne forestille sig at dette er grunden til at der normalt bruges DSP-blokke til denne slags operationer. \par
 
 Senere i opgaven forøgede vi størrelsen af input og output vektorerne. Dette gjorde at vi kunne regne med større tal, men gjorde det dog umuligt at realisere programmet på DE2-Board, da vi kun har så mange LED'er at arbejde med. dog kan vi undersøge hvor mange logiske elementer der vil blive allokeret til beregningerne, og vi har derfor lavet en graf der giver sammenhængen mellem bit-størrelsen, og antallet af logiske elementer:
 
@@ -78,7 +78,7 @@ Senere i opgaven forøgede vi størrelsen af input og output vektorerne. Dette g
 
 \pic{LE_graf.png}{0.8}{Graf for sammenhæng mellem LE og bitstørrelse}{Fig5}
 
-Vi ser her en eksponentiel stigning i antallet af logiske elementer. Udregninger viser at antallet af logiske elementer ca. stiger med en faktor 4, hver gang bit-størrelsen fordobles. Vores graf går kun op til 128 bit, idet 256 krævede så mange logiske elementer, at programmet ikke kunne syntetisere koden. Der kan derfor hurtigt komme til at komme mangel på logiske elementer til andre funktioner man kunne ønske sig i sin kode. Igen ser vi brugbarheden i DSP-blokkene.\\
+Vi ser her en eksponentiel stigning i antallet af logiske elementer. Udregninger viser at antallet af logiske elementer ca. stiger med en faktor 4, hver gang bit-størrelsen fordobles. Vores graf går kun op til 128 bit, idet 256 krævede så mange logiske elementer, at programmet ikke kunne syntetisere koden. Der kan derfor hurtigt komme til at komme mangel på logiske elementer til andre funktioner man kunne ønske sig i sin kode. Igen ser vi brugbarheden i DSP-blokkene.\par
 
 Ved vores addition med konstanter noterede vi antallet af logiske elementer der benyttes til udregningerne:
 
