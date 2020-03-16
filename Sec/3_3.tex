@@ -13,7 +13,7 @@ Istedet for DSP blokke, vil vi implemetere vores multiplikationsfunktion vha. lo
 
 \pic{DSP_blok.png}{1}{DSP-block blok i Assignment editor}{Fig1}
 
-Ligesom additionsoperatoren fra opgave 3.1 tidligere vil multiplikations operatoren ikke arbejde på std\textunderscore logic vektorer. Vi benytter derfor igen at vi kan omdefinere vores \textunderscore logic vektorer til unsigned, før lader multiplikations operatoren arbejde på dem. Vi benytter her unsigned istedet for signed, idet vi ikke har behov for at gange med negative tal til denne øvelse, selvom dette sagtens kunne fungere.
+Ligesom additionsoperatoren fra opgave 3.1 tidligere vil multiplikations operatoren ikke arbejde på std\textunderscore logic vektorer. Vi benytter derfor igen at vi kan omdefinere vores std\textunderscore logic vektorer til unsigned, før lader multiplikations operatoren arbejde på dem. Vi benytter her unsigned istedet for signed, idet vi ikke har behov for at gange med negative tal til denne øvelse, selvom dette sagtens kunne fungere.
 
 \begin{table}[H]
     \centering
@@ -48,7 +48,7 @@ For at teste vores multiplikater yderligere modificere vi vores kode til at regn
           \lstinputlisting{../src/mult_32.vhd}
 }
   \caption{Test-kode for multiplikation i Quartus II uden DSP-blokke}	
-  \label{src:Tab2}
+  \label{src:Tab3}
 \end{table}
 
 Til sidst multiplikerede vi vores ene input-vektor med en konstant værdi, for at se resultatet af ændringen. Nedenfor kan ses koden for multiplikation med 2:
@@ -60,7 +60,7 @@ Til sidst multiplikerede vi vores ene input-vektor med en konstant værdi, for a
           \lstinputlisting{../src/mult_2.vhd}
 }
   \caption{Kode for multiplkation med konstant}	
-  \label{src:Tab2}
+  \label{src:Tab4}
 \end{table}
 
 
