@@ -5,12 +5,41 @@
 
 \subsection{Introduktion}
 
+På FPGA'er bruger man ofter unidirectional porte, de dette gør det muligt, både at modtage og sende data fra samme port. Her vil vi forsøge at udnytte unidirectional porte til at styre vores LED'er.
+
+
 \subsection{Design og implementering}
 
-Husk at "When others" er fjernet, da alle 
+Først implementerer vi den source kode, entity "bi\textunderscore port" som er givet i opgaven. Denne kan ses her, på tabel \ref{src:bi_port1}.
+
+\begin{table}[H]
+    \centering
+      \framebox{
+        \rule{8pt}{0pt}
+          \lstinputlisting[firstline=1,lastline=11]{../src/bi_port.vhd}
+  }
+  \caption{Kode for 4bit-adder med unsigned}	
+  \label{src:bi_port1}
+\end{table}
+
+I tabel \ref{src:bi_port2} ses vores implementeringen af IBD figuren fra opgaven. Vi har valgt at bruge \textit{with-select} til at implementere de 2 multiplexere. Måden vi udnytter portenes bidirectionalitet, er ved at inkludere den både som input, som på linje 5, og som output, som på linje 6 i tabel \ref{src:bi_port2}. Vi har ikke inkluderet en \textit{when others} i vores \textit{with-select}, da alle tilfælde er opfyldt, og inklusionen af denne gav nogle underlige resultater.
+For at sikre vi ikke får konflikter når der skiftes mellem input og output for vores GPIO porte, sættes GPIO0 og GPIO1 som default til 'Z', high impedance. På den måde kan vi nemt override det output der bliver sendt, når porten skal bruges som input. 
+\begin{table}[H]
+    \centering
+      \framebox{
+        \rule{8pt}{0pt}
+          \lstinputlisting[firstline=13,lastline=25]{../src/bi_port.vhd}
+  }
+  \caption{Kode for 4bit-adder med unsigned}	
+  \label{src:bi_port2}
+\end{table}
+
+Source koden er selvfølgelig her efter blevet skrevet ind i en test koden, for at syntesiserer det på DE2 boardet. 
+
 
 \subsection{Resultater}
 
+Da LEDR og KEY er \textit{active low}, har vi valgt, for at gøre det nemmere, at representere tabellerne ud om vi trykker knapperne og om LED'erne er tændt, istedet for deres egentlige in-/ouput 
 \begin{table}[!hbt]
     \begin{tabular}{ccc|cc}
     \multicolumn{3}{c}{\textbf{INPUT}}   &
@@ -21,8 +50,8 @@ Husk at "When others" er fjernet, da alle
     0         & 1          & 0          & 1           & 1           \\
     0         & 1          & 1          & 1           & 1           \\
     1         & 0          & 0          & 0           & 1           \\
-    1         & 1          & 0          & 0           & 1           \\
     1         & 0          & 1          & 1           & 1           \\
+    1         & 1          & 0          & 0           & 1           \\
     1         & 1          & 1          & 1           & 1          
     \end{tabular}
     \centering
@@ -35,20 +64,27 @@ Husk at "When others" er fjernet, da alle
     \multicolumn{2}{c}{\textbf{OUTPUT}} \\
     SW{[}0{]} & KEY{[}2{]} & KEY{[}3{]} & LEDR{[}0{]} & LEDR{[}1{]} \\ \hline
     0         & 0          & 0          & 0           & 0           \\
-    0         & 1          & 0          & 1           & 1           \\
     0         & 0          & 1          & 0           & 0           \\
+    0         & 1          & 0          & 1           & 1           \\
     0         & 1          & 1          & 1           & 1           \\
     1         & 0          & 0          & 0           & 0           \\
-    1         & 1          & 0          & 0           & 0           \\
     1         & 0          & 1          & 1           & 1           \\
+    1         & 1          & 0          & 0           & 0           \\
     1         & 1          & 1          & 1           & 1          
     \end{tabular}
     \centering
     \caption{Med GPIO forbindelse}
 \end{table}
 
+
 \subsection{Diskussion}
 
+Uden GPIO og SW0 slukket, lyser LEDR0 altid og LEDR1 er afhængig af om man trykker på KEY2. Når SW0 er tændt, er det omvendt, hvor LEDR1 altid er tændt, og LEDR0 er afhængig af, om KEY1 er trykket på eller ej. \par
+Med en forbindelse mellem GPIO0 og GPIO1, ændre det sig til, at begge LED'er er afhængig af den samme KEY. Hvis SW0 er slukket er LED'erne kun tændt hvis der er trykket på KEY2. Hvis SW0 er tændt, er begge LED'er kun tændt, hvis der er trykket på KEY3. Vi får altså et noget forskelligt output, alt efter om der er en wire, eller ej.\par
+For at kunne simmulerer dette design, ville vi skulle bruge 'Z' i vores waveform simulering, for at kunne simulere vore \textit{high impedance} input på GPIO pins. Dette vil vi skulle gøre, da der ellers vil komme 'X', \textit{Unresolved} ud på LED'erne, hvilket vi ikke ønsker i hverken simuleringen eller syntesiseringen på DE2 boardet.
+
 \subsection{Konklusion}
+
+Brugen af bidirctional porte var en spænden men udfordrende opgave. Vi har lært hvor vigtigt det er altid at overveje hvilket input og outputs man for, og være opmærksom, så man ikke sende de forkerte slags signaler ud, hvilket kan forstyre andre steder og skabe \textit{unresolved} tilfælde, hvilket vi ikke er intresseret i. 
 
 \end{document}
