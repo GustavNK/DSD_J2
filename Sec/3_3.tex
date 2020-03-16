@@ -11,7 +11,7 @@ Vores DE2 boards er i stand til multiplikation, da den har en indbygget DSP bloc
 
 Istedet for DSP blokke, vil vi implemetere vores multiplikationsfunktion vha. logiske elementer. For at deaktivere programmets adgang til brug af blokke, indføre vi en anvisning i Assignment editoren.
 
-\pic{DSP_blok.png}{1}{DSP-block blok i Assignment editor}{Fig1}
+\pic{DSP_blok.png}{1}{DSP-block blok i Assignment editor}{Fig12}
 
 Ligesom additionsoperatoren fra opgave 3.1 tidligere vil multiplikations operatoren ikke arbejde på std\textunderscore logic vektorer. Vi benytter derfor igen at vi kan omdefinere vores std\textunderscore logic vektorer til unsigned, før lader multiplikations operatoren arbejde på dem. Vi benytter her unsigned istedet for signed, idet vi ikke har behov for at gange med negative tal til denne øvelse, selvom dette sagtens kunne fungere.
 
@@ -22,12 +22,12 @@ Ligesom additionsoperatoren fra opgave 3.1 tidligere vil multiplikations operato
           \lstinputlisting{../src/mult.vhd}
 }
   \caption{Kode for multiplikation i Quartus II uden DSP-blokke}	
-  \label{src:Tab1}
+  \label{src:Tab12}
 \end{table}
 
 Vi foretager også en realisering på DE2-Board. Koden for testfilen kan ses nedenfor sammen med et billede af realiseringen, hvor multiplikationen $11*7=77$ kan ses:
 
-\pic{DE2_1.jpg}{1}{DSP-block blok i Assignment editor}{Fig2}
+\pic{DE2_1.jpg}{1}{DSP-block blok i Assignment editor}{Fig22}
 
 \begin{table}[H]
     \centering
@@ -36,7 +36,7 @@ Vi foretager også en realisering på DE2-Board. Koden for testfilen kan ses ned
           \lstinputlisting{../src/multiplier_tester.vhd}
 }
   \caption{Test-kode for multiplikation i Quartus II uden DSP-blokke}	
-  \label{src:Tab2}
+  \label{src:Tab22}
 \end{table}
 
 For at teste vores multiplikater yderligere modificere vi vores kode til at regne med forskellige bit-størrelser. Vi prøver for 32, 16, 8, 4 og 2 gange størrer. Fra tidligere så vi et gange 2 forhold mellem input og output, så hvis output vektoren har en størrelse på 256 skal input have størrelsen 128, osv. Koden for tilfældet med 32 gange større kan ses nedenfor:
@@ -48,7 +48,7 @@ For at teste vores multiplikater yderligere modificere vi vores kode til at regn
           \lstinputlisting{../src/mult_32.vhd}
 }
   \caption{Test-kode for multiplikation i Quartus II uden DSP-blokke}	
-  \label{src:Tab3}
+  \label{src:Tab32}
 \end{table}
 
 Til sidst multiplikerede vi vores ene input-vektor med en konstant værdi, for at se resultatet af ændringen. Nedenfor kan ses koden for multiplikation med 2:
@@ -60,7 +60,7 @@ Til sidst multiplikerede vi vores ene input-vektor med en konstant værdi, for a
           \lstinputlisting{../src/mult_2.vhd}
 }
   \caption{Kode for multiplkation med konstant}	
-  \label{src:Tab4}
+  \label{src:Tab42}
 \end{table}
 
 
@@ -68,21 +68,21 @@ Til sidst multiplikerede vi vores ene input-vektor med en konstant værdi, for a
 
 Da vores multiplikater gjorde brug af logiske elementer til at foretage udregninger, har vi noteret hvor mange logiske elementer der faktisk gøres brug af under sådanne udregninger:
 
-\pic{LE1.png}{0.8}{DSP-block blok i Assignment editor}{Fig3}
+\pic{LE1.png}{0.8}{DSP-block blok i Assignment editor}{Fig32}
 
 Vi ser at der bliver benyttet 103 logiske elementer, ud af 33216 tilgængelige. Hvis vi sammenligner dette antal med observationer af logiske elementer fra tidliger opgaver, er 103 en del højere end vi har set tidligere. Disse tidliger opgaver har selvfølgelig omhandlet andre udregninger og operationer, men denne sammenligning giver stadig et indblik i det relativt store antal logiske elementer en multiplikations udregining tager. Man kunne forestille sig at dette er grunden til at der normalt bruges DSP-blokke til denne slags operationer. \par
 
 Senere i opgaven forøgede vi størrelsen af input og output vektorerne. Dette gjorde at vi kunne regne med større tal, men gjorde det dog umuligt at realisere programmet på DE2-Board, da vi kun har så mange LED'er at arbejde med. dog kan vi undersøge hvor mange logiske elementer der vil blive allokeret til beregningerne, og vi har derfor lavet en graf der giver sammenhængen mellem bit-størrelsen, og antallet af logiske elementer:
 
-\pic{LE_data.png}{0.2}{Data for sammenhæng mellem LE og bitstørrelse}{Fig4}
+\pic{LE_data.png}{0.2}{Data for sammenhæng mellem LE og bitstørrelse}{Fig42}
 
-\pic{LE_graf.png}{0.8}{Graf for sammenhæng mellem LE og bitstørrelse}{Fig5}
+\pic{LE_graf.png}{0.8}{Graf for sammenhæng mellem LE og bitstørrelse}{Fig52}
 
 Vi ser her en eksponentiel stigning i antallet af logiske elementer. Udregninger viser at antallet af logiske elementer ca. stiger med en faktor 4, hver gang bit-størrelsen fordobles. Vores graf går kun op til 128 bit, idet 256 krævede så mange logiske elementer, at programmet ikke kunne syntetisere koden. Der kan derfor hurtigt komme til at komme mangel på logiske elementer til andre funktioner man kunne ønske sig i sin kode. Igen ser vi brugbarheden i DSP-blokkene.\par
 
 Ved vores addition med konstanter noterede vi antallet af logiske elementer der benyttes til udregningerne:
 
-\pic{LE_data2.png}{0.2}{Graf for sammenhæng mellem LE og bitstørrelse}{Fig6}
+\pic{LE_data2.png}{0.2}{Graf for sammenhæng mellem LE og bitstørrelse}{Fig62}
 
 Vi ser her en generel tendens til at så længe der ganges med en faktor af 2, kræver det ikke nogen logiske elementer at udregne. Vi forestiller os at dette skyldes Quartus II blot foretager et bitshift for at multiplicere med 2, istedet for at benytte logiske elementer til udregninger, og derved sparer plads.
 
