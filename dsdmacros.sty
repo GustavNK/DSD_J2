@@ -64,6 +64,15 @@
 
 \newcommand\dsdtitle[4]{\dsdoldtitle{#1}{#2}{#3}{#4}}
 
+\newcommand{\pic}[4]{
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=#2\textwidth]{#1}
+		\caption{#3}
+		\label{#4}
+	\end{figure}
+}
+
 % Figure, table and source code style and macros
 \def\dirfigs{Figs/} % you can override these, also in text, like \def\dirfigs{MyDiretory\}
 \def\dirsrc{Src/}
