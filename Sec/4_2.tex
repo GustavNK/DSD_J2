@@ -17,28 +17,53 @@ Vi implementeret vores entity som på tabel \ref{src:hex_mux_ent} Først impleme
     \centering
       \framebox{
         \rule{8pt}{0pt}
-          \lstinputlisting[firstline=1,lastline=11]{\dirsrc hex_mux.vhd}
+          \lstinputlisting[firstline=1,lastline=11]{../src/hex_mux.vhd}
   }
   \caption{Entity af hex\textunderscore mux}
   \label{src:hex_mux_ent}
 \end{table}
 
-Arkitecturen for vores implementeringen kan ses på tabel \ref{src:hex_mux_arch}. Først laver vi et siganl, hvor i vores outputs fra de 3 "bin2sevenseg" kan kmbineres i. Derfefter har vi lavet en række konstanter i logic vectors, som indeholder 7 segments outputs for at vise "On", "Err" og "---". Dette gør koden mere læselig senere. Vi har portmappet vores 3 \textit{bin2seveneseg} til vores inputs \textit{bin} og signalet \textit{sseg}. Her efter bruger vi endelig vores \textit{when} statements, så vi kan vælge imellem vores inputs på multiplexeresn. Her bruges \textit{sel} så til at vælge om der skal vises "On", "Err" eller outputs fra \textit{sseg} på \textit{tsseg}. Igen har vi sikret os imod uforudsete inputs, og viser derfor \textit{dash} på vores 7-segments displays, i tilfælde af dette.
+Arkitecturen for vores implementeringen kan ses på tabel \ref{src:hex_mux_arch}. Først laver vi et signal, hvori vores outputs fra de 3 "bin2sevenseg" kan kombineres i. Derfefter har vi lavet en række konstanter i logic vectors, som indeholder 7 segments outputs for at vise "On", "Err" og "---". Dette gør koden mere læselig senere. Vi har portmappet vores 3 \textit{bin2seveneseg} til vores inputs \textit{bin} og signalet \textit{sseg}. Her efter bruger vi endelig vores \textit{when} statements, så vi kan vælge imellem vores inputs på multiplexeresn. Her bruges \textit{sel} så til at vælge om der skal vises "On", "Err" eller outputs fra \textit{sseg} på \textit{tsseg}. Igen har vi sikret os imod uforudsete inputs, og viser derfor \textit{dash} på vores 7-segments displays, i tilfælde af dette.
 
 \begin{table}[H]
     \centering
       \framebox{
         \rule{8pt}{0pt}
-          \lstinputlisting[firstline=13,lastline=33]{\dirsrc hex_mux.vhd}
+          \lstinputlisting[firstline=13,lastline=33]{../src/hex_mux.vhd}
   }
   \caption{Architecture af hex\textunderscore mux}
   \label{src:hex_mux_arch}
 \end{table}
 
-\subsection{Resultater}
+Tester-filen for hex\textunderscore mux kan ses nedenfor. Vi benytter her tryk-knapperne KEY(S), som alle er active-LOW, og LED'erne HEX, som er vores syv-segment displays:
 
-\subsection{Diskussion}
+\begin{table}[H]
+    \centering
+      \framebox{
+        \rule{8pt}{0pt}
+          \lstinputlisting{../src/hex_mux_test.vhd}
+  }
+  \caption{Architecture af hex\textunderscore mux\textunderscore test}
+  \label{src:hex_mux_arch_test}
+\end{table}
+
+Til sidst foretog vi en realisering på DE2-Boardet. Vist på Fig. 2 er outputtet ''On'':
+
+\pic{placeholder_image}{0.8}{Realisering på DE2-Board af When-Else}{DE2-Board}
+
+\subsection{Resultater og diskussion}
+
+Til opgaven blev vi bedt om at overveje hvad der kunne have være skyld i at der blev indkluderet af Latches i implementeringen af vores kode. Dog så vi ikke nogen Latches i RTL-Viewer diagrammet for vores program som ses Fig. 2 og Fig. 3:
+
+\pic{RLT_mux}{0.8}{RTL-Viewer diagram af Hex MUX}{RTL_mux}
+\pic{Open_RTL}{1}{Åbnet view af bin2sevenseg:sseg1 på RTL-viewer diagram}{RTL_mux}
+
+Vi mener at grunden til dette skyldes indkluderingen af vores ''dash'' else-statement som ses på linje 20 af Tab. 2. Ved at indkludere et dette output for alle inputs der ikke er angivet i vores architecture undgår vi at Quartus II vil forsøge at benytte Latches til strukturen. Nedenfor på Fig. 5 ses RTL-Viewer diagrammet for en version af koden hvor vi har fjernet ''else dash'' statementet, og det ses at der fremkommer en stor mængde Latches deraf.
+
+\pic{RTL_Latch}{1}{Åbnet view af bin2sevenseg:sseg1 på RTL-viewer diagram}{RTL_mux}
 
 \subsection{Konklusion}
+
+Som konklusion så vi at when-else statements kan benyttes til implementering af et svy-segment display. Vi også så at det kunne benyttes i kombination med with-select statements, til brug i structural-strukturering. Til sidst så vi også hvordan Quartus II's struktur kan ændres meget ved små ændringer, og hvordan man kunne undgå brugen af Latches vha. else-statements.
 
 \end{document}
