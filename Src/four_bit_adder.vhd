@@ -14,8 +14,8 @@ end;
 architecture unsigned_impl of four_bit_adder is
 signal c1 : std_logic_vector(4 downto 0);
 begin
-	c1 <= std_logic_vector(resize(unsigned(A),5) + resize(unsigned(B),5)
-	+ ("0000" & c_in));
+	c1 <= std_logic_vector(resize(unsigned(A),5) 
+		+ resize(unsigned(B),5) + ("0000" & c_in));
 	c_out <= c1(4);
 	sum <= c1(3 downto 0);
 end;
@@ -23,8 +23,8 @@ end;
 architecture signed_impl of four_bit_adder is
 signal c2 : std_logic_vector(4 downto 0);
 begin
-	c2 <= std_logic_vector(resize(signed(A),5) + resize(signed(B),5)
-	+ ("0000" & c_in));
+	c2 <= std_logic_vector(resize(signed(A),5) 
+		+ resize(signed(B),5) + ("0000" & c_in));
 	c_out <= c2(4);
 	sum <= c2(3 downto 0);
 end;
