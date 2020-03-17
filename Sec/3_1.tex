@@ -39,7 +39,7 @@ For at teste vores 4bit-adder foretog vi en functional simulation af vores kode.
 
 Vi foretog derefter en realisering på et DE2-Board. Resultatet af realiseringen kan ses på Fig.\ref{Fig21} nedenfor:
 
-\pic{Placeholder_Image.png}{0.4}{Placeholder Image}{Fig21}
+\pic{rea}{0.8}{unisgned på borad}{Fig21}
 %Indsæt realisering på DE2-Board for four_bit_adder_simple her
 
 Vi skulle nu teste hvordan vores 4bit-adder ville reagere, hvis vi ændrede typen af vektorerne i vores addition fra unsigned til signed. Vi skulle desuden teste hvorvidt om man kan have adskillige articheture's knyttet til den samme design entity. Derfor indeholder koden for vores signed 4bit-adder også koden for vores unsigned 4bit-adder i en delt architecture. Koden kan ses nedenfor:
@@ -56,7 +56,7 @@ Vi skulle nu teste hvordan vores 4bit-adder ville reagere, hvis vi ændrede type
 
 Denne strukturer blev også realiseret på DE2-Board, som ses på Fig.\ref{Fig31}:
 
-\pic{Placeholder_Image.png}{0.4}{Placeholder Image}{Fig31}
+\pic{rea2}{0.8}{Signed på DE2 board}{Fig31}
 %Indsæt realisering af De2-Baord for four_bit_adder_simple med begge architecture her
 
 Til sidst skulle vi forsøge at opgradere vores 4bit-adder, for at undgå overflow ved udregninger. Vi skal derfor have indkluderet et femte element, \textit{c\textunderscore in} til vores udregning. For at gøre dette, bliver vi nødt til at forøge størrelsen af vores inputvektorer, for at få plads til det nye element.\\
@@ -74,7 +74,7 @@ En lignende version for signed konstrueres og begge realiseres på DE2-Board.  K
   \label{src:Tab41}
 \end{table}
 
-\pic{Placeholder_Image.png}{0.4}{Placeholder Image}{Fig41}
+\pic{rea3}{0.8}{Realisering af signed adder med carry}{Fig41}
 %Indsæt realisering af c_in 4bit-adder med unsigned+signed version her
 
 \subsection{Resultater og diskussion}
